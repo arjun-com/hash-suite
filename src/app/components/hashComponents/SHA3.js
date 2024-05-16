@@ -1,9 +1,11 @@
-import { sha1, sha256, sha384, sha512 } from "crypto-hash"
+import { sha224, sha256 } from "@noble/hashes/sha256"
+import { sha512 } from "@noble/hashes/sha512"
+import { sha1 } from "@noble/hashes/sha1"
 import { useState } from "react"
 import { brico, plexMono, inter } from "@/lib/fonts"
 
 export default function SHA3() {
-	const [availableHashLengths] = useState([160, 256, 384, 512])
+	const [availableHashLengths] = useState([160, 224, 256, 512])
 	const [input, setInput] = useState("")
 	const [hashLength, setHashLength] = useState(160)
 	const [output, setOutput] = useState("")
@@ -17,13 +19,13 @@ export default function SHA3() {
 
 		const hashLengthToFunction = {
 			160: sha1,
+			224: sha224,
 			256: sha256,
-			384: sha384,
 			512: sha512
 		}
 
 		setProcessing(true)
-		setOutput(await hashLengthToFunction[hashLength](input))
+		setOutput(Buffer.from(hashLengthToFunction[hashLength](input)).toString("hex"))
 		setPrevInput(input)
 		setPrevHashLength(hashLength)
 		setProcessing(false)
@@ -31,7 +33,7 @@ export default function SHA3() {
 
 	return(
 		<>
-			<section className = "flex-1 border-r border-neutral-800 p-6">
+			<section className = "flex-1 border-r border-neutral-800 p-6 min-w-96">
 				<textarea placeholder = "Input for hash function" onChange = {(e) => setInput(e.target.value)} value = { input } className = { `${ inter.className } bg-black text-neutral-100 w-full h-[100px] text-md border border-neutral-800 focus:border-neutral-600 rounded-md outline-none transition-colors p-2 my-2 font-light` }></textarea>
 				<button onClick = { generateHash } className = { `w-full p-2 my-2 bg-black hover:bg-neutral-800 text-neutral-100 ${ inter.className } border border-neutral-800 rounded-md font-light transition-colors relative text-md ${ processing ? "animate-ping" : "" }` }>Generate Hash</button>
 				<div className = "flex">
