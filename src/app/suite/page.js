@@ -43,9 +43,9 @@ export default function Suite() {
 					</section>
 				</menu>
 
-				<section className = "flex-1 overflow-scroll no-scrollbar p-4">
+				<section className = "flex-1 overflow-scroll no-scrollbar">
 					{
-						<div className = "mx-auto max-w-[500px]">
+						<div className = "mx-auto flex"> {/* flex attribute here cuz the hash components are defined such that they are elements inside a flexbox. */}
 							<HashComponentLoader hash = { selectedHash } />
 						</div>
 					}
