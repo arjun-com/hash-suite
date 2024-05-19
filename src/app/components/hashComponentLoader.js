@@ -4,7 +4,7 @@ export default function HashComponentLoader({ hash }) {
 	if(hash == null) {
 		return(
 			<>
-				<h1>No hash selected.</h1>
+				<h1 className = "text-center p-4 rounded-md border border-neutral-800 text-neutral-100 mx-auto my-4">Select A Hash From The Sidebar.</h1>
 			</>
 		)
 	}

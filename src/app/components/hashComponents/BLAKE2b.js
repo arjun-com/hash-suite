@@ -25,7 +25,7 @@ export default function BLAKE2() {
 				<input type = "text" value = { output } disabled className = { `w-full bg-black text-neutral-100 ${plexMono.className} border border-neutral-800 rounded-md p-2 my-2 relative` } />
 			</section>
 
-			<section className = "w-80 p-6">
+			<section className = "flex-1 max-w-96 min-w-80 p-6">
 				<h1 className = { `${ brico.className } text-2xl font-medium text-neutral-100` }>CRC</h1>
 
 				<p className = { `${ inter.className } text-sm font-light text-neutral-200` }>

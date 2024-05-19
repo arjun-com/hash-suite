@@ -33,7 +33,7 @@ export default function Suite() {
 
 				<section className = "flex-1 overflow-scroll no-scrollbar">
 					{
-						<div className = "mx-auto flex"> { /* flex attribute here cuz the hash components are defined such that they are elements inside a flexbox. */}
+						<div className = "mx-auto flex">
 							<HashComponentLoader hash = { selectedHash } />
 						</div>
 					}

@@ -25,7 +25,7 @@ export default function MenuMobile({ selectedHash, setSelectedHash }) {
 				menuHidden ?
 				<ArrowRightEndOnRectangleIcon onClick = { () => { setMenuHidden(!menuHidden) } } className = "cursor-pointer fixed z-20 bottom-2 left-2 w-12 h-12 p-3 rounded-md hover:bg-neutral-800 transition-colors" />
 				:
-				<ArrowLeftEndOnRectangleIcon onClick = { () => { setMenuHidden(!menuHidden) } } className = "cursor-pointer fixed z-20 bottom-2 left-2 w-12 h-12 p-3 rounded-md hover:bg-neutral-800 transition-colors" />
+				<ArrowLeftEndOnRectangleIcon onClick = { () => { setMenuHidden(!menuHidden) } } className = "cursor-pointer fixed z-20 bottom-2 left-2 w-12 h-12 p-3 rounded-md bg-neutral-800 transition-colors" />
 			}
 
 			<menu className = { `${ menuHidden ? "w-0" : "w-48" } h-screen border-r border-neutral-800 overflow-scroll no-scrollbar transition-all` }>

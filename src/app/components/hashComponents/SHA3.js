@@ -50,7 +50,7 @@ export default function SHA3() {
 				<input type = "text" value = { output } disabled className = { `w-full bg-black text-neutral-100 ${plexMono.className} border border-neutral-800 rounded-md p-2 my-2 relative` } />
 			</section>
 
-			<section className = "w-80 p-6">
+			<section className = "flex-1 max-w-96 min-w-80 p-6">
 				<h1 className = { `${ brico.className } text-2xl font-medium text-neutral-100` }>SHA3 Digest</h1>
 
 				<p className = { `${ inter.className } text-sm font-light text-neutral-200` }>{ `SHA-3, or Secure Hash Algorithm 3, is a cryptographic hash function designed by Keccak, selected as the winner of the NIST hash function competition in 2012. Its development was primarily motivated by the need for a secure hash algorithm that could offer resistance against emerging cryptographic attacks while maintaining high efficiency. Unlike its predecessors, SHA-1 and SHA-2, which are based on the Merkle–Damgård construction, SHA-3 utilizes the sponge construction, which enhances its resistance to certain types of attacks, such as length extension attacks. `}
