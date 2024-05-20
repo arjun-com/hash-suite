@@ -8,7 +8,7 @@
 ## Install
 
 ```sh
-npm install
+git clone github.com/arjun-com/hash-suite.git
 ```
 
 ## Usage
@@ -23,6 +23,10 @@ npm run dev
 
 -   Website: arjun-com.github.io/me
 -   Github: [@arjun-com](https://github.com/arjun-com)
+
+## Important Note
+
+-  This project is in its very early stages.
 
 ## Show your support
 
