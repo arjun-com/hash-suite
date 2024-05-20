@@ -24,6 +24,10 @@ npm run dev
 -   Website: arjun-com.github.io/me
 -   Github: [@arjun-com](https://github.com/arjun-com)
 
+## Important Note
+
+-  This project is in its very early stages.
+
 ## Show your support
 
 Give a ⭐️ if this project helped you!
