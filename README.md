@@ -8,7 +8,7 @@
 ## Install
 
 ```sh
-npm install
+git clone github.com/arjun-com/hash-suite.git
 ```
 
 ## Usage
