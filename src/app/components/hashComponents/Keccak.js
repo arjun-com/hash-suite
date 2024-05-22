@@ -1,11 +1,11 @@
-import { crc1, crc8, crc16, crc32 } from "crc"
+import { keccak_224, keccak_256, keccak_384, keccak_512 } from "@noble/hashes/sha3"
 import { useState } from "react"
 import { brico, plexMono, inter } from "@/lib/fonts"
 
-export default function CRC() {
-	const [availableHashLengths] = useState([1, 8, 16, 32])
+export default function Keccak() {
+	const [availableHashLengths] = useState([224, 256, 384, 512])
 	const [input, setInput] = useState("")
-	const [hashLength, setHashLength] = useState(32)
+	const [hashLength, setHashLength] = useState(224)
 	const [output, setOutput] = useState("")
 	const [prevInput, setPrevInput] = useState("")
 	const [prevHashLength, setPrevHashLength] = useState(0)
@@ -16,14 +16,14 @@ export default function CRC() {
 		if(prevHashLength == hashLength && prevInput == input) return null
 
 		const hashLengthToFunction = {
-			1: crc1,
-			8: crc8,
-			16: crc16,
-			32: crc32
+			224: keccak_224,
+			256: keccak_256,
+			384: keccak_384,
+			512: keccak_512
 		}
 
 		setProcessing(true)
-		setOutput(hashLengthToFunction[hashLength](input).toString(16))
+		setOutput(Buffer.from(hashLengthToFunction[hashLength](input)).toString("hex"))
 		setPrevInput(input)
 		setPrevHashLength(hashLength)
 		setProcessing(false)
@@ -47,18 +47,12 @@ export default function CRC() {
 			</section>
 
 			<section className = "flex-1 max-w-96 min-w-80 p-6">
-				<h1 className = { `${ brico.className } text-2xl font-medium text-neutral-100` }>CRC</h1>
+				<h1 className = { `${ brico.className } text-2xl font-medium text-neutral-100` }>Keccak Hex Digest</h1>
 
 				<p className = { `${ inter.className } text-sm font-light text-neutral-200` }>
-					CRC (Cyclic Redundancy Check) is a type of error-detecting code commonly used in digital networks and storage devices to detect accidental changes to raw data. Unlike cryptographic hash functions, CRC is not designed for security purposes but rather for data integrity.
-					<br /><br />
-					The CRC algorithm was developed by W. Wesley Peterson in 1961 as a method to detect errors in communication channels such as telecommunications and storage mediums like hard drives and flash memory.
-					<br /><br />
-					CRC works by generating a fixed-size checksum (typically 16 or 32 bits) based on the data being checked. This checksum is appended to the data and transmitted or stored alongside it. Upon receiving or retrieving the data, the checksum is recalculated, and if the recalculated checksum matches the transmitted checksum, it is assumed that the data is intact. If not, it indicates that errors have occurred during transmission or storage.
-					<br /><br />
-					One of the key advantages of CRC is its efficiency in detecting errors, particularly single-bit errors and burst errors commonly encountered in digital communication channels. However, CRC is not suitable for detecting malicious tampering or intentional alterations to data, as it lacks cryptographic security features.
+					Writing in progress.
 				</p>
-				</section>
+			</section>
 		</>
 	)
 }

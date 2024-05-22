@@ -27,7 +27,7 @@ export default function Md5() {
 			</section>
 
 			<section className = "flex-1 max-w-96 min-w-80 p-6">
-				<h1 className = { `${ brico.className } text-2xl font-medium text-neutral-100` }>MD5 Hash</h1>
+				<h1 className = { `${ brico.className } text-2xl font-medium text-neutral-100` }>MD5 Hex Digest</h1>
 
 				<p className = { `${ inter.className } text-sm font-light text-neutral-200` }>The MD5 (Message Digest Algorithm 5) is a widely used cryptographic hash function that produces a 128-bit (16-byte) hash value. It was created by Ronald Rivest in 1991 as a successor to MD4, with the intention of strengthening the security of hash functions.
 				<br />

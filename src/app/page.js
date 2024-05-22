@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLongRightIcon } from "@heroicons/react/24/solid"
 import { brico, inter } from "../lib/fonts"
 
 export default function Home() {

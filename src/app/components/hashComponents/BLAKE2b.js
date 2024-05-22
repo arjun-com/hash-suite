@@ -2,7 +2,7 @@ import { blake2b } from "@noble/hashes/blake2b"
 import { useState } from "react"
 import { brico, plexMono, inter } from "@/lib/fonts"
 
-export default function BLAKE2() {
+export default function BLAKE2b() {
 	const [input, setInput] = useState("")
 	const [output, setOutput] = useState("")
 	const [prevInput, setPrevInput] = useState("")
@@ -26,7 +26,7 @@ export default function BLAKE2() {
 			</section>
 
 			<section className = "flex-1 max-w-96 min-w-80 p-6">
-				<h1 className = { `${ brico.className } text-2xl font-medium text-neutral-100` }>Blake2b</h1>
+				<h1 className = { `${ brico.className } text-2xl font-medium text-neutral-100` }>Blake2b Hex Digest</h1>
 
 				<p className = { `${ inter.className } text-sm font-light text-neutral-200` }>
 					Blake2b is a cryptographic hash function that was introduced in 2012 as part of the Blake2 family of cryptographic algorithms. It was developed by Jean-Philippe Aumasson, Samuel Neves, Zooko Wilcox-O&#39Hearn, and Christian Winnerlein. Building upon the earlier Blake hash function, Blake2b was designed to provide improved security, efficiency, and versatility for various cryptographic applications.

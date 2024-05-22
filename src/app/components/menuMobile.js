@@ -44,11 +44,9 @@ export default function MenuMobile({ selectedHash, setSelectedHash }) {
 					{
 						hashes.map(function(hash) {
 							return(
-								<>
-									<div className ={ `w-full rounded-md hover:bg-neutral-800 cursor-pointer transition-colors group my-2 ${ selectedHash == hash ? "bg-neutral-800" : "" }` }>
-										<button onClick = { () => handleClick(hash) } className = { `${ brico.className } text-lg w-full text-left m-2 text-nowrap` }> <StopIcon className = "inline w-4 h-4 text-neutral-600 group-hover:fill-neutral-600"/> { hash }</button>
-									</div>
-								</>
+								<div key = { hash } className ={ `w-full rounded-md hover:bg-neutral-800 cursor-pointer transition-colors group my-2 ${ selectedHash == hash ? "bg-neutral-800" : "" }` }>
+									<button onClick = { () => handleClick(hash) } className = { `${ brico.className } text-lg w-full text-left m-2 text-nowrap` }> <StopIcon className = "inline w-4 h-4 text-neutral-600 group-hover:fill-neutral-600"/> { hash }</button>
+								</div>
 							)
 						})
 					}
