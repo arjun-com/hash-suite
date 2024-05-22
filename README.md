@@ -23,9 +23,9 @@ npm run dev
 
 ## Planned TODOs
 
--   [ ] Make a seperate file for each desc of hashes.
--   [ ] Add more hashing algorithms.
--   [ ] Add seperate input for salt.
+-   [ ] Make a seperate file for desc of each hash.
+-   [ ] Add more hashes.
+-   [ ] Add options for salts.
 -   [ ] Allow multiple input prompts at once.
 
 ## Important Note
