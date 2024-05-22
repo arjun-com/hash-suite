@@ -24,9 +24,13 @@ npm run dev
 -   Website: arjun-com.github.io/me
 -   Github: [@arjun-com](https://github.com/arjun-com)
 
+## Planned TODOs
+
+-   [ ] Migrate descriptions of hashes to markdown.
+
 ## Important Note
 
--  This project is in its very early stages.
+-   This project is in its very early stages.
 
 ## Show your support
 
