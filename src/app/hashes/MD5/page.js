@@ -1,3 +1,5 @@
+"use client"
+
 import md5 from "md5"
 import { useState } from "react"
 import { brico, plexMono, inter } from "@/lib/fonts"

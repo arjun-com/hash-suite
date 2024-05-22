@@ -1,3 +1,5 @@
+"use client"
+
 import { blake2s } from "@noble/hashes/blake2s"
 import { useState } from "react"
 import { brico, plexMono, inter } from "@/lib/fonts"

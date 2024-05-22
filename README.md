@@ -11,11 +11,26 @@
 git clone github.com/arjun-com/hash-suite.git
 ```
 
+```sh
+npm install
+```
+
 ## Usage
 
 ```sh
 npm run dev
 ```
+
+## Planned TODOs
+
+-   [ ] Make a seperate file for each desc of hashes.
+-   [ ] Add more hashing algorithms.
+-   [ ] Add seperate input for salt.
+-   [ ] Allow multiple input prompts at once.
+
+## Important Note
+
+-   This project is in its very early stages.
 
 ## Author
 
@@ -23,14 +38,6 @@ npm run dev
 
 -   Website: arjun-com.github.io/me
 -   Github: [@arjun-com](https://github.com/arjun-com)
-
-## Planned TODOs
-
--   [ ] Migrate descriptions of hashes to markdown.
-
-## Important Note
-
--   This project is in its very early stages.
 
 ## Show your support
 

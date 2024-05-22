@@ -1,8 +1,10 @@
-import { sha1 } from "@noble/hashes/sha1"
+"use client"
+
+import { ripemd160 } from "@noble/hashes/ripemd160"
 import { useState } from "react"
 import { brico, plexMono, inter } from "@/lib/fonts"
 
-export default function SHA1() {
+export default function Ripemd160() {
 	const [input, setInput] = useState("")
 	const [output, setOutput] = useState("")
 	const [prevInput, setPrevInput] = useState("")
@@ -12,7 +14,7 @@ export default function SHA1() {
 		if(prevInput == input || input == "") return null
 
 		setProcessing(true)
-		setOutput(Buffer.from(sha1(input)).toString("hex"))
+		setOutput(Buffer.from(ripemd160(input)).toString("hex"))
 		setPrevInput(input)
 		setProcessing(false)
 	}
@@ -26,7 +28,7 @@ export default function SHA1() {
 			</section>
 
 			<section className = "flex-1 max-w-96 min-w-80 p-6">
-				<h1 className = { `${ brico.className } text-2xl font-medium text-neutral-100` }>SHA1 Hex Digest</h1>
+				<h1 className = { `${ brico.className } text-2xl font-medium text-neutral-100` }>Ripemd160 Hex Digest</h1>
 
 				<p className = { `${ inter.className } text-sm font-light text-neutral-200` }>
 					Writing in progress.
