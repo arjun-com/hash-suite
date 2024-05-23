@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { availableHashes as hashes } from "@/lib/hashesList"
 import Image from "next/image"
+import Link from "next/link"
 import { brico } from "@/lib/fonts"
 import { ArrowRightEndOnRectangleIcon, ArrowLeftEndOnRectangleIcon, StopIcon } from "@heroicons/react/24/outline"
 import { usePathname, useRouter } from "next/navigation"
@@ -15,7 +16,6 @@ export default function Menu() {
 
 	const handleClick = function(hash) {
 		setSelectedHash(hash)
-		router.push(`/hashes/${ hash }`)
 	}
 
 	const routeToRoot = function() {
@@ -57,9 +57,7 @@ export default function Menu() {
 					{
 						hashes.map(function(hash) {
 							return(
-								<div key = { hash } className ={ `w-full rounded-md hover:bg-neutral-800 cursor-pointer transition-colors group my-2 ${ selectedHash == hash ? "bg-neutral-800" : "" }` }>
-									<button onClick = { () => handleClick(hash) } className = { `${ brico.className } text-lg w-full text-left m-2` }> <StopIcon className = "inline w-4 h-4 text-neutral-600 group-hover:fill-neutral-600"/> { hash }</button>
-								</div>
+								<Link key = { hash } href = { `/hashes/${hash}` } onClick = { () => handleClick(hash) } className = { `${ brico.className } text-lg text-left w-full block hover:bg-neutral-800 rounded-md my-2 p-2 group transition-all` }> <StopIcon className = "inline w-4 h-4 text-neutral-600 group-hover:fill-neutral-600"/> { hash }</Link>
 							)
 						})
 					}
