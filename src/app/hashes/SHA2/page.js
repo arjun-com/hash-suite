@@ -42,7 +42,7 @@ export default function SHA2() {
 					{
 						availableHashLengths.map((availableHashLength) => {
 							return(
-								<button key = { availableHashLength } className = { `${ inter.className } flex-1 p-2 my-2 rounded-md border border-neutral-800 transition-colors ${ hashLength == availableHashLength ? "bg-neutral-800" : "" }` } onClick = { () => { setHashLength(availableHashLength) }}>{ availableHashLength } bit</button>
+								<button key = { availableHashLength } className = { `${ inter.className } text-neutral-100 flex-1 p-2 my-2 rounded-md border border-neutral-800 transition-colors ${ hashLength == availableHashLength ? "bg-neutral-800" : "" }` } onClick = { () => { setHashLength(availableHashLength) }}>{ availableHashLength } bit</button>
 							)
 						})
 					}

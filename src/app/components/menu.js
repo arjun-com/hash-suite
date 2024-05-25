@@ -57,7 +57,7 @@ export default function Menu() {
 					{
 						hashes.map(function(hash) {
 							return(
-								<Link key = { hash } href = { `/hashes/${hash}` } onClick = { () => handleClick(hash) } className = { `${ brico.className } text-lg text-left w-full block hover:bg-neutral-800 rounded-md my-2 p-2 group transition-all` }> <StopIcon className = "inline w-4 h-4 text-neutral-600 group-hover:fill-neutral-600"/> { hash }</Link>
+								<Link key = { hash } href = { `/hashes/${hash}` } onClick = { () => handleClick(hash) } className = { `${ brico.className } ${ selectedHash == hash ? "bg-neutral-800" : "" } text-lg font-light text-neutral-300 text-left w-full block hover:bg-neutral-800 rounded-md my-2 p-2 group transition-all` }> <StopIcon className = "inline w-4 h-4 text-neutral-600 group-hover:fill-neutral-600"/> { hash }</Link>
 							)
 						})
 					}
